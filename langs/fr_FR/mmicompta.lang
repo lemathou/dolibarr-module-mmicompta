@@ -1,0 +1,51 @@
+# Copyright (C) 2023 Mathieu Moulin <mathieu@dercya.com>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+#
+# Generic
+#
+
+# Module label 'ModuleMMIComptaName'
+ModuleMMIComptaName = Comptabilité / Factures / Paiements
+# Module description 'ModuleMMIComptaDesc'
+ModuleMMIComptaDesc = Options supplémentaires sur les partie Facturation, Règlements et Comptabilité
+
+#
+# Admin page
+#
+MMIComptaSetup = MMICompta setup
+Settings = Settings
+MMIComptaSetupPage = MMICompta setup page
+MMI_INVOICE_DEPOSIT_USE_TVA_TX = Taux de TVA à utiliser pour les acomptes en valeur
+FACTURE_DEPOSITS_ARE_JUST_PAYMENTS = Les Factures d'acomptes sont des preuves de paiement qui n'entrent pas dans le CA et ne sont pas transférées en compta (option obsolète)
+MMI_COMPTA_EXPORT_LABEL_AS_ACCOUNT = Utiliser le numéro de compte comme libellé pour l'export vers le logiciel comptable
+
+#
+# About page
+#
+About = About
+MMIComptaAbout = About MMICompta
+MMIComptaAboutPage = MMICompta about page
+
+#
+# Sample page
+#
+MyPageName = My page name
+
+#
+# Sample widget
+#
+MyWidget = My widget
+MyWidgetDescription = My widget description
