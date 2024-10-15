@@ -31,6 +31,7 @@ $arrayofparameters = array(
 	'MMI_INVOICE_DEPOSIT_USE_TVA_TX'=>array('type'=>'float', 'enabled'=>1),
 	'MMI_COMPTA_EXPORT_LABEL_AS_ACCOUNT'=>array('type'=>'yesno', 'enabled'=>1),
 	'MMI_COMPTA_EXPORT_LIBALPHA_USE_1STLETTER'=>array('type'=>'yesno', 'enabled'=>1),
+	'INVOICE_VALIDATED_PERMIT_DEPOSIT'=>array('type'=>'yesno', 'enabled'=>1),
 );
 
 require_once('../../mmicommon/admin/mmisetup_1.inc.php');

@@ -32,6 +32,7 @@ MMI_INVOICE_DEPOSIT_USE_TVA_TX = Taux de TVA à utiliser pour les acomptes en va
 FACTURE_DEPOSITS_ARE_JUST_PAYMENTS = Les Factures d'acomptes sont des preuves de paiement qui n'entrent pas dans le CA et ne sont pas transférées en compta (option obsolète)
 MMI_COMPTA_EXPORT_LABEL_AS_ACCOUNT = Utiliser le numéro de compte comme libellé pour l'export vers le logiciel comptable
 MMI_COMPTA_EXPORT_LIBALPHA_USE_1STLETTER = Utiliser le premier caractère du compte comme libellé Alpha (clé d'appel)
+INVOICE_VALIDATED_PERMIT_DEPOSIT = Autoriser les acomptes sur les factures validées (si pas encore en transférées en compta)
 
 #
 # About page
