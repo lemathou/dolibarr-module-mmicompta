@@ -26,7 +26,6 @@ ModuleMMIComptaDesc = Options supplémentaires sur les partie Facturation, Règl
 # Admin page
 #
 MMIComptaSetup = MMICompta setup
-Settings = Settings
 MMIComptaSetupPage = MMICompta setup page
 MMI_INVOICE_DEPOSIT_USE_TVA_TX = Taux de TVA à utiliser pour les acomptes en valeur
 FACTURE_DEPOSITS_ARE_JUST_PAYMENTS = Les Factures d'acomptes sont des preuves de paiement qui n'entrent pas dans le CA et ne sont pas transférées en compta (option obsolète)
@@ -37,7 +36,6 @@ INVOICE_VALIDATED_PERMIT_DEPOSIT = Autoriser les acomptes sur les factures valid
 #
 # About page
 #
-About = About
 MMIComptaAbout = About MMICompta
 MMIComptaAboutPage = MMICompta about page
 
