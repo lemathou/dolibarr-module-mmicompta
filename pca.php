@@ -131,7 +131,7 @@ FROM
     LEFT JOIN '.MAIN_DB_PREFIX.'societe AS su
 		  ON su.rowid = p2.fk_soc_fournisseur
     LEFT JOIN '.MAIN_DB_PREFIX.'expeditiondet AS ed
-		  ON cd.rowid = ed.fk_origin_line
+		  ON cd.rowid = ed.fk_elementdet
     LEFT JOIN '.MAIN_DB_PREFIX.'expedition AS e
 		  ON e.rowid = ed.fk_expedition
 WHERE
