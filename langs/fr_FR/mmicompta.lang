@@ -51,3 +51,4 @@ MyWidget = My widget
 MyWidgetDescription = My widget description
 
 MMIComptaPCA = Produits Constatés d'Avance
+MMIComptaDescription=Comptabilité MMI : produits constatés d'avance, export comptable, correction des factures payées et acomptes.
