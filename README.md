@@ -1,86 +1,65 @@
-# MMICOMPTA FOR [DOLIBARR ERP CRM](https://www.dolibarr.org)
+# MMICompta — Comptabilité MMI : produits constatés d'avance, export comptable, correction des factures payées et gestion des acomptes.
 
-## Features
+> Module Dolibarr **MMICompta** (version 1.0), branche `20.0`.
 
-Description of the module...
+## Fonctionnalités
 
-<!--
-![Screenshot mmicompta](img/screenshot_mmicompta.png?raw=true "MMICompta"){imgmd}
--->
+### Fonctionnalités principales
 
-Other external modules are available on [Dolistore.com](https://www.dolistore.com).
+- Produits Constatés d'Avance (PCA) : page `pca.php`, calcul et suivi.
+- Export comptable : `export.php`, options de libellé de compte (`MMI_COMPTA_EXPORT_LABEL_AS_ACCOUNT`) et de clé alpha (`MMI_COMPTA_EXPORT_LIBALPHA_USE_1STLETTER`).
+- Correction des factures payées : `fixpaid.php` (statut/encaissement).
+- Acomptes : `FACTURE_DEPOSITS_ARE_JUST_PAYMENTS`, `INVOICE_VALIDATED_PERMIT_DEPOSIT`, TVA des acomptes (`MMI_INVOICE_DEPOSIT_USE_TVA_TX`).
+- Page d'accueil `mmicomptaindex.php`.
 
-## Translations
+### Écrans et menus
 
-Translations can be completed manually by editing files into directories *langs*.
+- **Produits Constatés d'Avance** — `/custom/mmicompta/pca.php` (menu mmicompta, droit `$user->rights->accounting->comptarapport->lire`)
 
-<!--
-This module contains also a sample configuration for Transifex, under the hidden directory [.tx](.tx), so it is possible to manage translation using this service.
+### Pages
 
-For more informations, see the [translator's documentation](https://wiki.dolibarr.org/index.php/Translator_documentation).
+- `admin/about.php`
+- `admin/setup.php`
+- `export.php`
+- `fixpaid.php`
+- `mmicomptaindex.php`
+- `pca.php`
 
-There is a [Transifex project](https://transifex.com/projects/p/dolibarr-module-template) for this module.
--->
+### Configuration
 
-<!--
+| Constante | Type | Rôle |
+|---|---|---|
+| `FACTURE_DEPOSITS_ARE_JUST_PAYMENTS` | yesno | Les Factures d'acomptes sont des preuves de paiement qui n'entrent pas dans le CA et ne sont pas transférées en compta (option obsolète) |
+| `MMI_INVOICE_DEPOSIT_USE_TVA_TX` | float | Taux de TVA à utiliser pour les acomptes en valeur |
+| `MMI_COMPTA_EXPORT_LABEL_AS_ACCOUNT` | yesno | Utiliser le numéro de compte comme libellé pour l'export vers le logiciel comptable |
+| `MMI_COMPTA_EXPORT_LIBALPHA_USE_1STLETTER` | yesno | Utiliser le premier caractère du compte comme libellé Alpha (clé d'appel) |
+| `INVOICE_VALIDATED_PERMIT_DEPOSIT` | yesno | Autoriser les acomptes sur les factures validées (si pas encore en transférées en compta) |
+
+### Classes et composants
+
+- `lib/mmicompta.lib.php`
+
+## Prérequis
+
+- Dolibarr >= 11.0 (branche `20.0` : Dolibarr 20.0).
+- Modules MMI : `mmicommon`. **`mmicommon` doit être activé en premier.**
 
 ## Installation
 
-### From the ZIP file and GUI interface
+1. Copier le module dans `htdocs/custom/mmicompta` :
 
-- If you get the module in a zip file (like when downloading it from the market place [Dolistore](https://www.dolistore.com)), go into
-menu ```Home - Setup - Modules - Deploy external module``` and upload the zip file.
+   ```sh
+   cd htdocs/custom
+   git clone <dépôt> mmicompta
+   ```
 
-Note: If this screen tell you there is no custom directory, check your setup is correct:
+2. Dans Dolibarr : **Configuration → Modules**, activer d'abord `mmicommon`, puis ce module.
+3. Vérifier les permissions dans la fiche des utilisateurs concernés.
 
-- In your Dolibarr installation directory, edit the ```htdocs/conf/conf.php``` file and check that following lines are not commented:
+## Licence
 
-    ```php
-    //$dolibarr_main_url_root_alt ...
-    //$dolibarr_main_document_root_alt ...
-    ```
+GPLv3 ou ultérieure — voir `COPYING`. Documentation sous GFDL.
 
-- Uncomment them if necessary (delete the leading ```//```) and assign a sensible value according to your Dolibarr installation
+## Changelog
 
-    For example :
-
-    - UNIX:
-        ```php
-        $dolibarr_main_url_root_alt = '/custom';
-        $dolibarr_main_document_root_alt = '/var/www/Dolibarr/htdocs/custom';
-        ```
-
-    - Windows:
-        ```php
-        $dolibarr_main_url_root_alt = '/custom';
-        $dolibarr_main_document_root_alt = 'C:/My Web Sites/Dolibarr/htdocs/custom';
-        ```
-
-### From a GIT repository
-
-- Clone the repository in ```$dolibarr_main_document_root_alt/mmicompta```
-
-```sh
-cd ....../custom
-git clone git@github.com:gitlogin/mmicompta.git mmicompta
-```
-
-### <a name="final_steps"></a>Final steps
-
-From your browser:
-
-  - Log into Dolibarr as a super-administrator
-  - Go to "Setup" -> "Modules"
-  - You should now be able to find and enable the module
-
--->
-
-## Licenses
-
-### Main code
-
-GPLv3 or (at your option) any later version. See file COPYING for more information.
-
-### Documentation
-
-All texts and readmes are licensed under GFDL.
+Voir [CHANGELOG.md](CHANGELOG.md) (évolutions datées).
